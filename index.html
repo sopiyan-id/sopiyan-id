@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102b4e">
+  <meta name="description" content="Website pribadi Sopiyan, S.I.P. — profil, pendidikan, minat, dan karya di bidang Ilmu Pemerintahan.">
+  <title>Sopiyan, S.I.P. | Profil Pribadi</title>
+  <style>
+    :root{--navy:#102b4e;--blue:#1677e8;--sky:#eaf4ff;--ink:#1c2d42;--muted:#5d6b7b;--white:#fff;--line:#dce7f2;--shadow:0 12px 35px rgba(16,43,78,.09)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:84px}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+    a{color:inherit;text-decoration:none}.container{width:min(1100px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(16,43,78,.97);color:white;box-shadow:0 4px 18px #102b4e20}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-family:Georgia,serif;font-size:1.25rem;font-weight:700;letter-spacing:1.5px;white-space:nowrap}
+    nav{display:flex;align-items:center;gap:23px;font-size:.91rem}nav a{opacity:.88}nav a:hover{opacity:1;color:#8dc5ff}
+    .menu{display:none;background:transparent;border:1px solid #ffffff60;color:white;border-radius:9px;padding:7px 11px;font-size:1rem}
+    .hero{background:linear-gradient(120deg,#102b4e 0%,#163f6c 62%,#eaf4ff 62%,#d8eaff 100%);color:white;overflow:hidden}
+    .hero-inner{min-height:435px;display:grid;grid-template-columns:1.35fr .8fr;align-items:center;gap:45px;padding-top:48px;padding-bottom:48px}
+    .eyebrow{font-size:.76rem;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#78bdff}
+    h1{font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.06;letter-spacing:-1.5px;margin:12px 0}
+    .subtitle{font-size:1.13rem;font-weight:650;color:#dcecff;margin:0 0 15px}
+    .hero p{max-width:600px;color:#e9f2fb;margin:0 0 25px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;padding:11px 17px;font-weight:750;font-size:.93rem;border:1px solid transparent;cursor:pointer}
+    .btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:#0864ce}.btn-outline{border-color:#b7d7fa;color:white}.btn-outline:hover{background:#ffffff12}
+    .avatar-wrap{display:flex;justify-content:center;align-items:center}
+    .avatar{width:min(300px,70vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;position:relative;background:linear-gradient(145deg,#fff,#cfe5ff);border:9px solid #ffffffa8;box-shadow:0 22px 55px #071b3038;color:var(--navy)}
+    .avatar:before{content:"";position:absolute;inset:14px;border:1px solid #1677e84d;border-radius:50%}
+    .avatar span{font-family:Georgia,serif;font-size:5rem;font-weight:800;letter-spacing:-5px}
+    section{padding:76px 0}.section-label{font-size:.74rem;letter-spacing:2px;text-transform:uppercase;color:var(--blue);font-weight:850}
+    h2{font-family:Georgia,serif;color:var(--navy);font-size:clamp(1.8rem,3vw,2.45rem);line-height:1.2;margin:8px 0 18px}
+    .lead{color:var(--muted);max-width:720px}
+    .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}
+    .signature{font-family:"Brush Script MT","Segoe Script",cursive;font-size:2rem;color:var(--navy);margin-top:18px}
+    .facts{background:linear-gradient(145deg,#f4f9ff,#eaf4ff);padding:26px;border-radius:18px;border:1px solid #e1edf9}
+    .fact{display:grid;grid-template-columns:42px 1fr;gap:12px;padding:11px 0}.fact+.fact{border-top:1px solid #d8e7f5}
+    .fact-icon{width:38px;height:38px;border-radius:11px;background:white;color:var(--blue);display:grid;place-items:center;font-size:1.15rem}
+    .fact strong{display:block;font-size:.91rem;color:var(--navy)}.fact span{font-size:.9rem;color:var(--muted)}
+    .tint{background:#f4f8fc}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .card{background:white;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+    .card-icon{width:46px;height:46px;display:grid;place-items:center;background:var(--sky);border-radius:13px;color:var(--blue);font-size:1.35rem}
+    .card h3{color:var(--navy);margin:15px 0 8px;font-size:1.08rem}.card p{margin:0;color:var(--muted);font-size:.94rem}
+    .timeline{border-left:2px solid #b8d9ff;margin:28px 0 0 9px;padding-left:26px;display:grid;gap:22px}
+    .timeline-item{position:relative;background:white;padding:20px 23px;border:1px solid var(--line);border-radius:13px}
+    .timeline-item:before{content:"";position:absolute;left:-34px;top:24px;width:14px;height:14px;border-radius:50%;background:var(--blue);border:4px solid #d9ebff}
+    .timeline-item h3{margin:0 0 5px;color:var(--navy)}.timeline-item p{margin:0;color:var(--muted)}
+    .interests{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.pill{background:#eaf4ff;border:1px solid #d3e7ff;color:#174d85;border-radius:999px;padding:8px 13px;font-size:.9rem;font-weight:650}
+    .contact-box{background:linear-gradient(120deg,#102b4e,#174879);color:white;padding:40px;border-radius:22px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .contact-box h2{color:white;margin-top:0}.contact-box p{color:#dbeaff;margin-bottom:0;max-width:620px}
+    footer{background:#0b2039;color:#d6e4f5;padding:25px 0;font-size:.88rem}.footer-inner{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}.footer-brand{font-family:Georgia,serif;font-weight:700;letter-spacing:1px;color:white}
+    .small{font-size:.82rem;color:#91a8c2}
+    @media(max-width:800px){.menu{display:block}nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:18px 22px 24px;flex-direction:column;align-items:flex-start;gap:16px}nav.open{display:flex}.hero-inner{grid-template-columns:1fr;gap:24px;text-align:center}.hero p{margin-left:auto;margin-right:auto}.actions{justify-content:center}.avatar{width:210px}.avatar span{font-size:4rem}.about-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.contact-box{align-items:flex-start;flex-direction:column}section{padding:58px 0}}
+    @media(min-width:600px) and (max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#beranda">SOPIYAN, S.I.P.</a>
+    <button class="menu" id="menuBtn" aria-label="Buka menu" aria-expanded="false">☰ Menu</button>
+    <nav id="navLinks" aria-label="Navigasi utama">
+      <a href="#beranda">Beranda</a><a href="#tentang">Tentang Saya</a><a href="#pendidikan">Pendidikan</a><a href="#minat">Minat</a><a href="#kontak">Kontak</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="beranda">
+    <div class="container hero-inner">
+      <div>
+        <div class="eyebrow">Profil Pribadi & Profesional</div>
+        <h1>SOPIYAN, S.I.P.</h1>
+        <div class="subtitle">Ilmu Pemerintahan · Pelayanan Publik · Pembangunan Desa</div>
+        <p>Berkomitmen untuk terus belajar, berkarya, dan berkontribusi dalam mewujudkan tata kelola pemerintahan yang baik serta pembangunan yang bermanfaat bagi masyarakat.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#tentang">Kenali Saya <span aria-hidden="true">↗</span></a>
+          <button class="btn btn-outline" id="printBtn" type="button">Cetak / Simpan Profil PDF</button>
+        </div>
+      </div>
+      <div class="avatar-wrap" aria-label="Avatar sementara Sopiyan">
+        <div class="avatar"><span>SP</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tentang">
+    <div class="container about-grid">
+      <div>
+        <div class="section-label">Tentang Saya</div>
+        <h2>Mengenal Lebih Dekat</h2>
+        <p class="lead">Saya Sopiyan, S.I.P., dengan latar belakang dan minat di bidang Ilmu Pemerintahan. Saya tertarik pada tata kelola publik, pembangunan desa, pelayanan publik, serta penguatan partisipasi masyarakat dalam proses kebijakan.</p>
+        <p class="lead">Melalui pembelajaran dan pengalaman, saya berupaya mengembangkan wawasan serta kemampuan untuk mendukung pemerintahan yang transparan, akuntabel, responsif, dan berorientasi pada kebutuhan masyarakat.</p>
+        <div class="signature">Sopiyan, S.I.P.</div>
+      </div>
+      <aside class="facts" aria-label="Ringkasan profil">
+        <div class="fact"><div class="fact-icon">♙</div><div><strong>Nama</strong><span>Sopiyan, S.I.P.</span></div></div>
+        <div class="fact"><div class="fact-icon">⌂</div><div><strong>Bidang</strong><span>Ilmu Pemerintahan dan tata kelola publik</span></div></div>
+        <div class="fact"><div class="fact-icon">▣</div><div><strong>Pendidikan</strong><span>Ilmu Pemerintahan — Universitas Terbuka</span></div></div>
+        <div class="fact"><div class="fact-icon">◎</div><div><strong>Fokus</strong><span>Pelayanan publik, pembangunan desa, dan partisipasi masyarakat</span></div></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="tint" id="pendidikan">
+    <div class="container">
+      <div class="section-label">Pendidikan & Pengembangan</div>
+      <h2>Belajar untuk Memberi Dampak</h2>
+      <p class="lead">Pendidikan menjadi bagian penting dalam memperluas pemahaman tentang pemerintahan, kebijakan publik, dan pembangunan masyarakat.</p>
+      <div class="cards">
+        <article class="card"><div class="card-icon">🎓</div><h3>Ilmu Pemerintahan</h3><p>Universitas Terbuka — Fakultas Hukum, Ilmu Sosial, dan Ilmu Politik (FHISIP).</p></article>
+        <article class="card"><div class="card-icon">📚</div><h3>Pembelajaran Berkelanjutan</h3><p>Mengembangkan pengetahuan tentang administrasi pemerintahan, kebijakan publik, dan inovasi pelayanan.</p></article>
+        <article class="card"><div class="card-icon">🤝</div><h3>Kolaborasi Masyarakat</h3><p>Mendorong dialog, kerja sama, dan partisipasi warga dalam proses pembangunan.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="minat">
+    <div class="container">
+      <div class="section-label">Fokus & Minat</div>
+      <h2>Bidang yang Saya Dalami</h2>
+      <p class="lead">Beberapa tema yang menjadi perhatian dalam pengembangan diri dan kontribusi profesional.</p>
+      <div class="interests">
+        <span class="pill">Tata Kelola Publik</span><span class="pill">Kebijakan Publik</span><span class="pill">Pembangunan Desa</span><span class="pill">Pelayanan Publik</span><span class="pill">Partisipasi Masyarakat</span><span class="pill">Reformasi Birokrasi</span><span class="pill">Digitalisasi Pemerintahan</span><span class="pill">Pemberdayaan Masyarakat</span>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="card-icon">🏛️</div><h3>Pemerintahan yang Baik</h3><p>Mendukung prinsip transparansi, akuntabilitas, efektivitas, dan responsivitas dalam penyelenggaraan pemerintahan.</p></article>
+        <article class="card"><div class="card-icon">🌱</div><h3>Pembangunan Desa</h3><p>Menaruh perhatian pada potensi lokal, pemberdayaan warga, dan pembangunan desa yang berkelanjutan.</p></article>
+        <article class="card"><div class="card-icon">💡</div><h3>Inovasi Pelayanan</h3><p>Mempelajari peluang pemanfaatan teknologi dan inovasi untuk meningkatkan kualitas pelayanan kepada masyarakat.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="tint">
+    <div class="container">
+      <div class="section-label">Prinsip Pribadi</div>
+      <h2>Belajar · Berkarya · Berdampak</h2>
+      <div class="cards">
+        <article class="card"><h3>Integritas</h3><p>Menjunjung kejujuran, tanggung jawab, dan konsistensi dalam menjalankan amanah.</p></article>
+        <article class="card"><h3>Kolaborasi</h3><p>Menghargai gagasan dan membangun kerja sama untuk mencapai tujuan bersama.</p></article>
+        <article class="card"><h3>Pengabdian</h3><p>Mengutamakan manfaat bagi masyarakat sebagai orientasi dalam belajar dan berkarya.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <div class="container">
+      <div class="contact-box">
+        <div><h2>Mari Terhubung</h2><p>Terbuka untuk diskusi, kolaborasi, dan pertukaran gagasan seputar pemerintahan, pelayanan publik, serta pembangunan desa.</p></div>
+        <a class="btn btn-primary" href="mailto:">Tambahkan Email Anda</a>
+      </div>
+      <p class="small" style="margin-top:14px">Catatan: ganti tautan email pada tombol kontak dengan alamat email Anda sebelum website dipublikasikan.</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container footer-inner">
+    <div><div class="footer-brand">SOPIYAN, S.I.P.</div><div class="small">Belajar · Berkarya · Berdampak</div></div>
+    <div class="small">© <span id="year"></span> Sopiyan, S.I.P. · Dibuat dengan semangat kontribusi.</div>
+  </div>
+</footer>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }));
+  document.getElementById('printBtn').addEventListener('click', () => window.print());
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<style>
+  @media print{header,.actions,.contact-box .btn{display:none!important}.hero{background:#102b4e!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.hero-inner{min-height:auto;padding:25px 0}.avatar{width:150px}section{padding:28px 0}.cards{break-inside:avoid}.contact-box{background:#102b4e!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</body>
+</html>
